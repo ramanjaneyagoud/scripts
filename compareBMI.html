@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare BMI</title>
+    <style>
+        div {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bmi1">The Person having more BMI is : <span></span></div>
+    <div id="bmi2">The Person having more BMI is : <span></span></div>
+    <div id="one">I. Hi my number is 1</div>
+    <div id="two">II. Hi my number is 2</div>
+    <div id="three">III. Hi my number is 3</div>
+    <div id="four">IV. Hi my number is 4</div>
+    <script>
+        //Calulating BMI using ternary operator
+        let ramWeight, ramHeight, samWeight, samHeight;
+        ramWeight = 86; ramHeight = 176; samWeight = 60; samHeight = 156; let ramBMI = ramWeight / ramHeight ** 2;
+        let samBMI = samWeight / samHeight ** 2;
+
+        let per = ramBMI > samBMI ? "Ram" : "Sam";
+        document.querySelector("#bmi1 span").innerHTML = `${per} , and his BMI is ${(ramBMI * 1000).toFixed(2)}`;
+
+        //Calulating BMI using function printing on console
+        function bmi(w, h) {
+            return ((w / h ** 2) * 1000).toFixed(2);
+        }
+        document.querySelector("#bmi2 span").innerHTML = `${bmi(97, 176)}`;
+        document.querySelector("#bmi2 span").innerHTML = `${bmi(85, 146)}`;
+    </script>
+
+    <script>
+        // writing function to find change the string in a statement
+        function changeString(selector, oldValue, newValue) {
+            document.querySelector(selector).innerHTML = document.querySelector(selector).innerHTML.replace(oldValue, newValue);
+        }
+        changeString("#one", "I", "X");
+        changeString("#two", "II", "XI");
+        changeString("#three", "III", "XII");
+    </script>
+
+</body>
+
+</html>
