@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team avg score and more condiiton</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        let dolphin, kolas;
+        dolphin = (96 + 108 + 189) / 3;
+        kolas = (88 + 101 + 110) / 3;
+        let winner = dolphin >= kolas && dolphin > 100 ? "Dolphin Wins 🏆" : "Koals Wins 🏆";
+        //kolas >= dolphin && kolas > 100 ? "Kolas Wins 🏆" : "Dolphin Wins 🏆";
+        document.querySelector("div").innerHTML = winner;
+    </script>
+</body>
+
+</html>
